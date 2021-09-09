@@ -14,6 +14,8 @@
  * Update URI:        https://www.rodzandonadi.com/i-am-writer/
  * Text Domain:       i-am-writer   
  * Domain Path:       /languages
+ * Git:               https://github.com/rodrigozan/i-am-writer.git
+ * Branch:            master
 */
 
 /*
@@ -25,4 +27,7 @@ Você deve ter recebido uma cópia da GNU General Public License junto com I Am 
 if ( is_admin() ) {
     // we are in admin mode
     require_once __DIR__ . '/admin/wp-i-am-writer-admin.php';
+    require_once __DIR__ . '/includes/wp-i-am-writer-livros.php';
+    require_once __DIR__ . '/includes/wp-i-am-writer-contos.php';
+    require_once __DIR__ . '/includes/wp-i-am-writer-personagens.php';
 }

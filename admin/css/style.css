@@ -1,0 +1,10 @@
+/* Refactory Bootstrap */
+
+h1{
+    padding-left:12px;
+}
+
+.card {
+    padding: 0px !important;
+    margin-right: 5px !important;
+}
