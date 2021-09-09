@@ -3,7 +3,7 @@
 /**
  * Plugin Name:       I Am Writer
  * Plugin URI:        https://www.rodzandonadi.com/i-am-writer/
- * Description:       Transforme seu wordpress em uma plataforma de escrita literária. Para escritores profissionais e amadores.
+ * Description:       Transforme seu WordPress em uma plataforma de escrita literária. Para escritores profissionais e amadores.
  * Version:           1.0.0
  * Requires at least: 5.8.1
  * Requires PHP:      7.3.0
