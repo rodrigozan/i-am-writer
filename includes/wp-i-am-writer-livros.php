@@ -6,18 +6,18 @@ add_action('init', 'type_post_livros');
 
 function type_post_livros() { 
     $labels = array(
-        'name' => _x('Livros', 'post type general name'),
+        'name' => _x('Livro', 'post type general name'),
         'singular_name' => _x('Livro', 'post type singular name'),
         'add_new' => _x('Criar Livro', 'Novo item'),
-        'add_new_livro' => __('Novo Livro'),
-        'edit_livro' => __('Editar Livro'),
-        'new_livro' => __('Livro Novo'),
-        'view_livro' => __('Ver Livros'),
-        'search_livros' => __('Procurar livros'),
-        'not_found' =>  __('Nenhum livro encontrado'),
-        'not_found_in_trash' => __('Nenhum livro encontrado na lixeira'),
-        'parent_livro_colon' => '',
-        'menu_name' => 'Livros'
+        'add_new' => __('Novo Livro'),
+        'edit_item' => __('Editar Livro'),
+        'new_item' => __('Livro Novo'),
+        'view_item' => __('Ver Livros'),
+        'search_items' => __('Procurar Livros'),
+        'not_found' =>  __('Nenhum Livro encontrado'),
+        'not_found_in_trash' => __('Nenhum Livro encontrado na lixeira'),
+        'parent_item_colon' => '',
+        'menu_name' => 'Livro'
     );
 
     $args = array(

@@ -48,25 +48,25 @@ register_post_type( 'conto' , $args );
     flush_rewrite_rules();
 }
 
-add_action( 'init', 'create_contos_taxonomy_serie', 0 );
+add_action( 'init', 'create_contos_taxonomy_antologia', 0 );
 
-function create_contos_taxonomy_serie() {
+function create_contos_taxonomy_antologia() {
 
     $labels = array(
-        'name' => _x( 'Série', 'taxonomy general name' ),
-        'singular_name' => _x( 'Série', 'taxonomy singular name' ),
-        'search_items' =>  __( 'Pesquisar Séries' ),
-        'all_items' => __( 'Todas as Séries' ),
-        'edit_item' => __( 'Editar Série' ), 
-        'update_item' => __( 'Atualizar Série' ),
-        'add_Novo_item' => __( 'Nova Série' ),
-        'Novo_item_name' => __( 'Novo nome da Série' ),
-        'menu_name' => __( 'Série' ),
+        'name' => _x( 'Antologia', 'taxonomy general name' ),
+        'singular_name' => _x( 'Antologia', 'taxonomy singular name' ),
+        'search_items' =>  __( 'Pesquisar Antologias' ),
+        'all_items' => __( 'Todas as Antologias' ),
+        'edit_item' => __( 'Editar Antologia' ), 
+        'update_item' => __( 'Atualizar Antologia' ),
+        'add_Novo_item' => __( 'Nova Antologia' ),
+        'Novo_item_name' => __( 'Novo nome da Antologia' ),
+        'menu_name' => __( 'Antologia' ),
     );    
 
     // Now register the taxonomy
     register_taxonomy(
-        'serie',
+        'antologia',
         array('conto'), 
         array(
             'hierarchical' => true,
@@ -75,15 +75,15 @@ function create_contos_taxonomy_serie() {
             'show_in_rest' => true,
             'show_admin_column' => true,
             'query_var' => true,
-            'rewrite' => array( 'slug' => 'serie' ),
+            'rewrite' => array( 'slug' => 'antologia' ),
         )
     );
 
 }
 
-add_action( 'init', 'create_contos_taxonomy_genero', 0 );
+add_action( 'init', 'create_contos_taxonomy_contogenero', 0 );
 
-function create_contos_taxonomy_genero() {
+function create_contos_taxonomy_contogenero() {
 
 $labels = array(
     'name' => _x( 'Gênero', 'taxonomy general name' ),
@@ -98,7 +98,7 @@ $labels = array(
 );    
 
 register_taxonomy(
-    'genero',
+    'contogenero',
     array('conto'), 
     array(
         'hierarchical' => true,
@@ -107,15 +107,15 @@ register_taxonomy(
         'show_in_rest' => true,
         'show_admin_column' => true,
         'query_var' => true,
-        'rewrite' => array( 'slug' => 'genero' ),
+        'rewrite' => array( 'slug' => 'contogenero' ),
     )
 );
 
 }
 
-add_action( 'init', 'create_contos_nonhierarchical_tags', 0 );
+add_action( 'init', 'create_contos_nonhierarchical_contotags', 0 );
 
-function create_contos_nonhierarchical_tags() {
+function create_contos_nonhierarchical_contotags() {
 
     $labels = array(
         'name' => _x( 'Tags', 'taxonomy general name' ),
@@ -136,7 +136,7 @@ function create_contos_nonhierarchical_tags() {
     ); 
 
     register_taxonomy(
-        'tags',
+        'contotags',
         'conto',
         array(
             'hierarchical' => false,
@@ -146,7 +146,7 @@ function create_contos_nonhierarchical_tags() {
             'show_admin_column' => true,
             'update_count_callback' => '_update_post_term_count',
             'query_var' => true,
-            'rewrite' => array( 'slug' => 'tag' ),
+            'rewrite' => array( 'slug' => 'contotags' ),
         )
     );
 }

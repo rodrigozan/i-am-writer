@@ -19,6 +19,10 @@ function iawriter_options_subpage_personagens_html() {
     include 'subpages/wp-i-am-writer-submenu-personagens.php';
 }
 
+function iawriter_options_subpage_form_personagens_html() {
+    include 'subpages/wp-i-am-writer-submenu-form-personagem.php';
+}
+
 function iawriter_options_page() {
     add_menu_page(
         'I Am Writer',
@@ -33,6 +37,7 @@ function iawriter_options_page() {
 
 function register_my_custom_submenu_page() {
     add_submenu_page( 'i_am_writer', 'Livros', 'Livros', 'manage_options', 'iawriter_options_subpage_livros_html', 'iawriter_options_subpage_livros_html' ); 
+    add_submenu_page( 'i_am_writer', 'Criar Personagem', 'Criar Personagem', 'manage_options', 'iawriter_options_subpage_form_personagens_html', 'iawriter_options_subpage_form_personagens_html' );
     add_submenu_page( 'i_am_writer', 'Contos', 'Contos', 'manage_options', 'iawriter_options_subpage_contos_html', 'iawriter_options_subpage_contos_html' );
     add_submenu_page( 'i_am_writer', 'Personagens', 'Personagens', 'manage_options', 'iawriter_options_subpage_personagens_html', 'iawriter_options_subpage_personagens_html' );
 }
