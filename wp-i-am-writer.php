@@ -30,4 +30,11 @@ if ( is_admin() ) {
     require_once __DIR__ . '/includes/wp-i-am-writer-livros.php';
     require_once __DIR__ . '/includes/wp-i-am-writer-contos.php';
     require_once __DIR__ . '/includes/wp-i-am-writer-personagens.php';
+    require_once __DIR__ . '/includes/wp-i-am-writer-functions.php';
 }
+
+function wp_i_am_writer_scripts() {
+    wp_enqueue_script( 'jquery', get_template_directory_uri() . 'assets/js/jquery.js', array(), '1.0.0', true );
+}
+add_action( 'wp_enqueue_scripts', 'wp_i_am_writer_scripts' );
+
